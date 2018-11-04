@@ -4,24 +4,37 @@ body {
    background-color: #fff3e0;
 
 }
+
+.burgerList {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.burgerName {
+    color: #fff3e0;
+}
+
+.burgerPic {
+    margin-bottom: -20px;
+}
+
 .card {
     margin-left: 20px;
     margin-right: 20px;
     background-color: #412614;    
 }
 
-.burgerPic {
-    margin-bottom: -20px;
+.change-devoured {
+    background-color: #f39744
 }
-.burgerList {
-    padding-left: 20px;
-    padding-right: 20px;
 
+.delete-burger {
+    background-color: #fff3e0;
 }
-.burgerName {
+
+.form-group {
     color: #fff3e0;
 }
-
 
 h3 {
     color: white;
@@ -32,15 +45,4 @@ h3 {
     color: #412614;
 }
 
-.delete-burger {
-    background-color: #fff3e0;
 
-}
-
-.change-devoured {
-    background-color: #f39744
-}
-
-.form-group {
-    color: #fff3e0;
-}
