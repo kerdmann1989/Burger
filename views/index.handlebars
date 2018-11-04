@@ -1,38 +1,49 @@
-<h1>Eat Da Burger!</h1>
+<div class="row">
 
-<h2>Burgers to Eat</h2>
+  <div class="col s6">
+    <div class="card z-depth-5 center-align menu">
+      <div class="card-panel orange lighten-5">
+        <h4>Burgers Available</h4>
+      </div>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
+      {{#each burgers}}
+      {{#unless devoured}}
       {{> burgers/burger-block devour=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that have been eaten</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devour=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+      {{/unless}}
+      {{/each}}
+    </div>
   </div>
 
-  {{!-- <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Not Devoured
-  </div> --}}
+  <div class="col s6 center-align">
 
-  <button type="submit">Add Burger</button>
-</form>
+    <div class="card z-depth-5 center-align menu">
+      <div class="card-panel orange lighten-5">
+        <h4>Burgers on Order</h4>
+      </div>
+
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> burgers/burger-block devour=false}}
+      {{/if}}
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="col s6">
+    <div class="card z-depth-5 center-align menu">
+      <div class="card-panel orange lighten-5">
+        <h4>Add Your Own Burger</h4>
+      </div>
+      <form class="create-form">
+
+        <div class="form-group">
+          <label for="ca">Enter your burger here</label>
+          <input type="text" id="ca" name="name" class="center-align">
+        </div>
+        <button type="submit">Add Burger</button>
+        <br>
+        <br>
+
+      </form>
+    </div>
+  </div>
