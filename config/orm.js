@@ -1,4 +1,4 @@
-var connection = require("./connection");
+var connection = require("./connection.js");
 
 function printQuestionMarks(num) {
     var arr = [];
@@ -42,8 +42,13 @@ var orm = {
                 throw err;
             }
             cb(result);
-        })
-    }, insertOne: function(table, cols, vals, cb) {
+        });
+    },
+    
+    insertOne: function(table, cols, vals, cb) {
+      
+      var queryString = "INSERT INTO " + table;
+
         queryString += " (";
         queryString += cols.toString();
         queryString += ") ";
@@ -60,11 +65,13 @@ var orm = {
 
       cb(result);
     });
-  }, update: function(table, objColVals, condition, cb) {
-      var queryString = "UPDATE " + table;
-
-      queryString += " SET ";
-    queryString += objToSql(objColVals);
+  },
+  
+  updateOne: function(table, objColVals, condition, cb) {
+    var queryString = "UPDATE " + table;
+    // queryString += " SET "
+    queryString += " SET devoured=true ";
+    // queryString += objToSql(objColVals);
     queryString += " WHERE ";
     queryString += condition;
 
@@ -77,7 +84,8 @@ var orm = {
       cb(result);
     });
   },
-  delete: function(table, condition, cb) {
+
+ delete: function(table, condition, cb) {
     var queryString = "DELETE FROM " + table;
     queryString += " WHERE ";
     queryString += condition;
@@ -92,5 +100,4 @@ var orm = {
   }
 };
 
-// Export the orm object for the model (cat.js).
 module.exports = orm;
