@@ -18,4 +18,4 @@ Eat a Burger is an full-stack application built with:
 
 * [View the application on Heroku](https://desolate-sands-99860.herokuapp.com/)
 
-![Alt text](/public/images/EatABurger.PNG "Eat A Burger Screenshot" | width=300)
+![Alt text](/public/images/EatABurger.PNG =300x)
