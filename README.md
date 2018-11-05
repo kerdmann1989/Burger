@@ -14,7 +14,7 @@ Eat a Burger is an full-stack application built with:
 * **Order Again:** User can click the "Yum! Order Again" button which will move the burger back to the "Burgers Available" column so it can be ordered again. Clicking the button will also change the status of the burger in the database.
 * **Delete Burger:** User can click on the "trash" button to delete the burger from the menu. This will also delete the burger from the database.
 
-## View
+## View the Application
 
 * [View the application on Heroku](https://desolate-sands-99860.herokuapp.com/)
 
