@@ -17,8 +17,13 @@ body {
     font-weight: bold;
 }
 
+
 .burgerPic {
     margin-bottom: -60px;
+}
+
+#ca {
+    font-size: 42px;
 }
 
 .card {
