@@ -1,5 +1,7 @@
 .addBurger {
-    background-color: #f39744
+    background-color: #f39744;
+    color: #412614;
+    font-weight: bold;
 }
 
 body {
@@ -33,7 +35,9 @@ body {
     }
 
 .change-devoured {
-    background-color: #f39744
+    background-color: #f39744;
+    color: #412614;
+    font-weight: bold;
 }
 
 .delete-burger {
